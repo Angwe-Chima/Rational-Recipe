@@ -1,0 +1,83 @@
+/* Italianno */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.popularDiv{
+  margin-top: 2em;
+  padding: 2em 4em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10em;  
+  align-items: center;
+}
+
+.popularDiv > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.popularDiv .splideCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.092);
+  border-radius: .5rem;
+}
+
+.popularDiv > div img{
+  width: 100%;
+  height: 100%;
+  filter: saturate(125%);
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.popularDiv > div span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: limegreen;
+  padding: .5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;  font-size: .8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.popularDiv > div p{
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  background-color: red;
+  top: 70%;
+  width: 100%;
+  left: 0;
+  color: white;
+  padding: .5rem;
+  position: absolute;
+  font-weight: bold;
+  font-family: "Italianno", cursive;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+
+/* Custom styles for Splide arrows */
+.splide__arrow {
+  border-radius: 50%; 
+  font-size: 1.5em;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.207);
+  transition: background-color 0.5s ease; 
+}
+
+.splide__arrow:hover {
+  background-color: #00000075;
+}
