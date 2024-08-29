@@ -10,7 +10,7 @@ function Popular() {
   useEffect(() => {
     const check = localStorage.getItem("popular");
     if (check) {
-      setRandomRecipe(JSON.parse(check));      
+      setRandomRecipe(JSON.parse(check));
     } else {
       const apiKey = import.meta.env.VITE_SPOONACULAR_API_KEY;
       axios
@@ -19,26 +19,31 @@ function Popular() {
         )
         .then((response) => {
           setRandomRecipe(response.data.recipes);
-          localStorage.setItem("popular", JSON.stringify(response.data.recipes));
+          localStorage.setItem(
+            "popular",
+            JSON.stringify(response.data.recipes)
+          );
         });
     }
   }, []);
 
   return (
     <div className="popularDiv">
+      <h3>
+        Popular <span>...</span>
+      </h3>
       <Splide
         options={{
           rewind: true,
           perPage: 3,
           drag: "free",
-          gap: "2em",
+          gap: "2.5em",
           pagination: false,
         }}
       >
         {randomRecipe.map((recipe) => (
           <SplideSlide key={recipe.id} className="splideCard">
-            <div>
-            {recipe.vegan? <span>Vegan</span>: ""}
+            <div className="imgDiv">
               <img src={recipe.image} alt={recipe.title} />
               <p>{recipe.title}</p>
             </div>

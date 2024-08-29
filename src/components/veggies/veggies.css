@@ -1,80 +1,94 @@
-/* Italianno */
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-
+/* Dancing script */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 
 /* Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.veggiesDiv{
-  margin-top: 2em;
+.veggiesDiv {
+  margin-block: 1em;
+  flex-direction: column;
   padding: 2em 4em;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 1em;
+  align-items: start;
 }
 
-.veggiesDiv > div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
+.veggiesDiv h3 {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 2px;
   position: relative;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
 }
 
-.veggiesDiv .splideCard{
+.veggiesDiv h3::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  bottom: -3px;
+}
+
+.veggiesDiv .splideCard {
+  align-items: center;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.092);
-  border-radius: .5rem;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.092);
+  border-radius: 0.5rem;
 }
 
-.veggiesDiv > div img{
+.veggiesDiv > div img {
   width: 100%;
   height: 100%;
   filter: saturate(125%);
   object-fit: cover;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
-.veggiesDiv > div span{
+.veggiesDiv > div span {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   background-color: limegreen;
-  padding: .5em;
+  padding: 0.5em;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;  font-size: .8rem;
+  font-weight: 500;
+  font-size: 0.8rem;
   font-weight: bold;
   color: white;
 }
 
-.veggiesDiv > div p{
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  background-color: red;
-  top: 70%;
+.veggiesDiv > div p {
+  font-size: 0.75rem;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.456);
+  backdrop-filter: blur(15px);
+  bottom: 0;
   width: 100%;
-  left: 0;
   color: white;
-  padding: .5rem;
+  box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.319);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
   position: absolute;
   font-weight: bold;
-  font-family: "Italianno", cursive;
-  font-weight: 600;
-  margin-top: 1em;
+  font-weight: 500;
 }
-
 
 /* Custom styles for Splide arrows */
 .splide__arrow {
-  border-radius: 50%; 
+  border-radius: 50%;
   font-size: 1.5em;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.207);
-  transition: background-color 0.5s ease; 
+  transition: background-color 0.5s ease;
 }
 
 .splide__arrow:hover {

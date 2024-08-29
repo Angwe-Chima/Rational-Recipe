@@ -10,43 +10,50 @@ function Veggies() {
   useEffect(() => {
     const check = localStorage.getItem("veggies");
     if (check) {
-      setRandomRecipe(JSON.parse(check));      
+      setRandomRecipe(JSON.parse(check));
     } else {
       const apiKey = import.meta.env.VITE_SPOONACULAR_API_KEY;
       axios
         .get(
-          `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=12&include-tags=vegetarian`
+          `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=12&tags=vegetarian`
         )
         .then((response) => {
           setRandomRecipe(response.data.recipes);
-          localStorage.setItem("veggies", JSON.stringify(response.data.recipes));
+          localStorage.setItem(
+            "veggies",
+            JSON.stringify(response.data.recipes)
+          );
         });
     }
-  }, [])
+  }, []);
 
-    return (
-      <div className="veggiesDiv">
-        <Splide
-          options={{
-            rewind: true,
-            perPage: 4,
-            drag: "free",
-            gap: "2em",
-            pagination: false,
-          }}
-        >
-          {randomRecipe.map((recipe) => (
-            <SplideSlide key={recipe.id} className="splideCard">
-              <div>
-              {recipe.vegan? <span>Vegan</span>: ""}
-                <img src={recipe.image} alt={recipe.title} />
-                <p>{recipe.title}</p>
-              </div>
-            </SplideSlide>
-          ))}
-        </Splide>
-      </div>
-    );
+  return (
+    <div className="veggiesDiv">
+      <h3>
+        Vegeterian <span>...</span>
+      </h3>
+
+      <Splide
+        options={{
+          rewind: true,
+          perPage: 4,
+          drag: "free",
+          gap: "2em",
+          pagination: false,
+        }}
+      >
+        {randomRecipe.map((recipe) => (
+          <SplideSlide key={recipe.id} className="splideCard">
+            <div className="imgDiv">
+              {recipe.vegan ? <span>Vegan</span> : ""}
+              <img src={recipe.image} alt={recipe.title} />
+              <p>{recipe.title}</p>
+            </div>
+          </SplideSlide>
+        ))}
+      </Splide>
+    </div>
+  );
 }
 
-export default Veggies
+export default Veggies;

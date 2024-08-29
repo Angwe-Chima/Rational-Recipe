@@ -6,9 +6,11 @@
 
 body{
   width: 100%;
-  background-color: rgb(249, 232, 201);
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(46, 46, 46);
 }
 
 #root{
   width: 100%;
 }
+
