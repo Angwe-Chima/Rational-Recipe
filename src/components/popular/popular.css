@@ -17,7 +17,6 @@
 .popularDiv h3 {
   color: white;
   position: relative;
-  letter-spacing: 2px;
   position: relative;
   font-size: 2rem;
   font-family: "Dancing Script", cursive;
@@ -56,6 +55,12 @@
   filter: saturate(125%);
   object-fit: cover;
   border-radius: 0.5rem;
+}
+
+.popularDiv a{
+  display: flex;
+  flex-direction: column;
+ text-decoration: none;
 }
 
 .popularDiv > div p {

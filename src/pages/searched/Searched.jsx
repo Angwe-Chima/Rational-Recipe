@@ -1,7 +1,7 @@
 import "./searched.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function Searched() {
   const apiKey = import.meta.env.VITE_SPOONACULAR_API_KEY;
@@ -27,10 +27,12 @@ function Searched() {
 
   return (
     <div className="resultDiv">
-      {searchedRecipes.map((item, idx) => (
+      {searchedRecipes.map((recipe, idx) => (
         <div key={idx}>
-          <img src={item.image} alt={item.title} />
-          <p>{item.title}</p>
+          <Link to={`/recipe/${recipe.id}`}>
+            <img src={recipe.image} alt={recipe.title} />
+            <p>{recipe.title}</p>
+          </Link>
         </div>
       ))}
     </div>

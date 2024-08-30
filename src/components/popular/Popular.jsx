@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
 import "./popular.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import axios from "axios";
 import "@splidejs/react-splide/css";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Popular() {
   const [randomRecipe, setRandomRecipe] = useState([]);
@@ -44,8 +45,10 @@ function Popular() {
         {randomRecipe.map((recipe) => (
           <SplideSlide key={recipe.id} className="splideCard">
             <div className="imgDiv">
-              <img src={recipe.image} alt={recipe.title} />
-              <p>{recipe.title}</p>
+              <Link to={`/recipe/${recipe.id}`}>
+                <img src={recipe.image} alt={recipe.title} />
+                <p>{recipe.title}</p>
+              </Link>
             </div>
           </SplideSlide>
         ))}

@@ -3,6 +3,7 @@ import axios from "axios";
 import "./veggies.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { Link } from "react-router-dom";
 
 function Veggies() {
   const [randomRecipe, setRandomRecipe] = useState([]);
@@ -45,9 +46,11 @@ function Veggies() {
         {randomRecipe.map((recipe) => (
           <SplideSlide key={recipe.id} className="splideCard">
             <div className="imgDiv">
-              {recipe.vegan ? <span>Vegan</span> : ""}
-              <img src={recipe.image} alt={recipe.title} />
-              <p>{recipe.title}</p>
+              <Link to={`/recipe/${recipe.id}`}>
+                {recipe.vegan ? <span>Vegan</span> : ""}
+                <img src={recipe.image} alt={recipe.title} />
+                <p>{recipe.title}</p>
+              </Link>
             </div>
           </SplideSlide>
         ))}

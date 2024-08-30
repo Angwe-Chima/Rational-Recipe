@@ -29,6 +29,7 @@ function Search() {
           <input
             type="text"
             value={input}
+            placeholder="search recipe..."
             onChange={(e) => setInput(e.target.value)}
           />
           <AiOutlineSearch className="searchIcon" />
