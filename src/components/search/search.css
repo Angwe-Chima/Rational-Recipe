@@ -11,11 +11,11 @@
   display: flex;
   justify-content:center ;
   align-items: center;
-  width: 35%;
+  width: 40%;
 }
 
 .searchDiv input{
-  padding: .7rem;
+  padding: .8rem;
   width: 100%;
   border-radius: .5rem;
   outline: none;

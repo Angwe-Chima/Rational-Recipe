@@ -23,7 +23,13 @@ function Cuisine() {
   }, [params.type]);
 
   return (
-    <div className="resultDiv">
+    <motion.div
+      className="resultDiv"
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+    >
       {cuisine.map((recipe) => (
         <div key={recipe.id}>
           <Link to={`/recipe/${recipe.id}`}>
@@ -32,7 +38,7 @@ function Cuisine() {
           </Link>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 
