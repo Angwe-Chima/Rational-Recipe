@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./countryCategory.css";
-import { IoFastFoodOutline, IoPizzaOutline, IoArrowBack } from "react-icons/io5";
+import {
+  IoFastFoodOutline,
+  IoPizzaOutline,
+  IoArrowBack,
+} from "react-icons/io5";
 import { GiChopsticks, GiNoodles } from "react-icons/gi";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -14,7 +18,7 @@ function CountryCategory() {
 
   const handleBackClick = () => {
     setShowBackButton(false);
-    navigate("/"); 
+    navigate("/");
   };
 
   return (

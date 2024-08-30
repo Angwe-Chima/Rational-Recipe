@@ -1,4 +1,4 @@
-.searchDiv{
+.searchDiv {
   margin-top: 1em;
   width: 100%;
   display: flex;
@@ -6,45 +6,44 @@
   align-items: center;
 }
 
-.searchDiv div{
+.searchDiv div {
   position: relative;
   display: flex;
-  justify-content:center ;
+  justify-content: center;
   align-items: center;
   width: 40%;
 }
 
-.searchDiv input{
-  padding: .8rem;
+.searchDiv input {
+  padding: 0.8rem;
   width: 100%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
 }
 
-.searchDiv .searchIcon{
+.searchDiv .searchIcon {
   position: absolute;
   top: 30%;
   right: 1em;
   font-size: 1.2rem;
 }
 
-.backIconDiv{
-  left:6em;
+.backIconDiv {
+  left: 6em;
   background-color: black;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  padding: .3em 2em;
+  padding: 0.3em 2em;
   font-size: 1.1rem;
-  transition: .5s ease;
+  transition: 0.5s ease;
   cursor: pointer;
-  border-radius: .5rem;
-
+  border-radius: 0.5rem;
 }
 
-.backIconDiv:hover{ 
+.backIconDiv:hover {
   color: red;
 }
