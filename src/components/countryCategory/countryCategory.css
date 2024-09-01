@@ -12,8 +12,7 @@
 
 .categoryDiv > a{
   text-decoration: none;
-  background-color: black;
-  color: white;
+  
   border-radius: .3rem;
   display: flex;
   justify-content: center;
