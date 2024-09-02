@@ -9,7 +9,7 @@
 }
 
 .resultDiv > div{
-  width: 20%;
+  width: 21%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +19,7 @@
 }
 
 .resultDiv a{
+  width: 100%;
   display: flex;
   flex-direction: column;
  text-decoration: none;

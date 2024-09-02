@@ -7,7 +7,7 @@
 
 body {
   width: 100%;
-  background-color: rgb(46, 46, 46);
+  background-color: rgb(72, 71, 71);
 }
 
 #root {
@@ -25,4 +25,9 @@ nav {
 
 nav img {
   width: 15rem;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }

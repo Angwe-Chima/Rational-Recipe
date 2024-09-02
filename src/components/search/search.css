@@ -11,7 +11,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40;
+  width: 40%;
+  min-width: 250px;
 }
 
 .searchDiv input {

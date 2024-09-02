@@ -59,7 +59,7 @@ function Recipe() {
               </div>
 
               <div className="inst">
-                <h3>Instruction</h3>
+                <h3>Instructions</h3>
                 <p
                   dangerouslySetInnerHTML={{ __html: detail?.instructions }}
                 ></p>

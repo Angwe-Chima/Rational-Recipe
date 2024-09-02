@@ -16,7 +16,7 @@ function Popular() {
       const apiKey = import.meta.env.VITE_SPOONACULAR_API_KEY;
       axios
         .get(
-          `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=9`
+          `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=12`
         )
         .then((response) => {
           setRandomRecipe(response.data.recipes);
